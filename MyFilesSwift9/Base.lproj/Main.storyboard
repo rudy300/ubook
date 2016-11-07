@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5TV-P7-NnC">
+            <objects>
+                <viewController id="kNC-6o-ciq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zjn-mv-Dbj"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZYX-Ye-oYl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SZ6-WO-P2p">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hag-7N-HJb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="UBook" id="WCk-WT-u5y"/>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0002542_rockford-illinois-folded-city-street-map.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Qh9-re-W4g">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fG6-om-iDB" appends="YES" id="IE8-qJ-VNQ"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="rhc-b5-cOq" id="ykq-y0-1Fw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BE5-cF-reB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="fG6-om-iDB"/>
+                <searchDisplayController id="rhc-b5-cOq">
+                    <connections>
+                        <outlet property="delegate" destination="kNC-6o-ciq" id="tgF-Rd-uan"/>
+                        <outlet property="searchContentsController" destination="kNC-6o-ciq" id="z2m-GA-nYt"/>
+                        <outlet property="searchResultsDataSource" destination="kNC-6o-ciq" id="e7K-So-rQO"/>
+                        <outlet property="searchResultsDelegate" destination="kNC-6o-ciq" id="Vkm-hR-idW"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-86" y="509"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyFilesSwift9" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jGx-kL-c7B">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="Mjq-iV-Kbp"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKh-EY-EcC">
+                                <rect key="frame" x="235" y="209" width="131" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="mUL-gx-ivi"/>
+                                </constraints>
+                                <state key="normal" title="Search by ZipCode">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dUw-IW-KZs" kind="presentation" id="gWY-nV-hSZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiL-xX-kXO">
+                                <rect key="frame" x="253" y="247" width="94" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="P5E-Xg-o8C"/>
+                                </constraints>
+                                <state key="normal" title="Search Books">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hBh-yS-k9D" kind="presentation" id="Gnz-ya-Igl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxC-zB-U2g">
+                                <rect key="frame" x="236" y="531" width="128" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="Key-9b-7oj"/>
+                                </constraints>
+                                <state key="normal" title="?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8aD-H9-2NV">
+                                <rect key="frame" x="0.0" y="278" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jV7-ET-O6Y">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="UBook search" id="nsn-Br-0IT"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YiL-xX-kXO" firstAttribute="top" secondItem="bKh-EY-EcC" secondAttribute="bottom" constant="2" id="0ox-7m-cLY"/>
+                            <constraint firstItem="jGx-kL-c7B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HTy-jK-Xbi"/>
+                            <constraint firstItem="bKh-EY-EcC" firstAttribute="top" secondItem="jGx-kL-c7B" secondAttribute="bottom" constant="30" id="Hsw-hS-gNh"/>
+                            <constraint firstAttribute="trailing" secondItem="jGx-kL-c7B" secondAttribute="trailing" id="RMo-gs-i5Y"/>
+                            <constraint firstItem="jGx-kL-c7B" firstAttribute="centerX" secondItem="bKh-EY-EcC" secondAttribute="centerX" id="V91-Z3-cUk"/>
+                            <constraint firstItem="hxC-zB-U2g" firstAttribute="top" secondItem="YiL-xX-kXO" secondAttribute="bottom" constant="8" symbolic="YES" id="k9p-vI-AIe"/>
+                            <constraint firstItem="jGx-kL-c7B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="m97-Mx-szJ"/>
+                            <constraint firstItem="bKh-EY-EcC" firstAttribute="centerX" secondItem="YiL-xX-kXO" secondAttribute="centerX" id="mas-DC-hjY"/>
+                            <constraint firstItem="YiL-xX-kXO" firstAttribute="centerX" secondItem="hxC-zB-U2g" secondAttribute="centerX" id="q8p-4o-fkr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="qDf-Vq-Y91" kind="presentation" id="I5t-Y1-SlB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="509"/>
+        </scene>
+        <!--Load External View Controller-->
+        <scene sceneID="klt-et-Dfe">
+            <objects>
+                <viewController id="hBh-yS-k9D" customClass="LoadExternalViewController" customModule="MyFilesSwift9" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a2e-Fh-bsg"/>
+                        <viewControllerLayoutGuide type="bottom" id="r1x-2F-sIP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oVO-gs-3FZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="91m-lm-FpZ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Our Purpose" id="rl2-LI-7gf">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="4Li-0a-CDP">
+                                            <connections>
+                                                <action selector="btnBack:" destination="hBh-yS-k9D" id="BoN-CF-Mt8"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MWW-zQ-1EE">
+                                <rect key="frame" x="20" y="64" width="560" height="528"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Ever taken a class where you only need a University Book for one semester? Ever bought a University book without ever needing it?                                                              UBook is an app created to help University students find books they need for the semester and sell books they dont need after the class. Just search your zip code to find people near your University selling books they dont need anymore! If you have a specific book in mind, find your book by subject.                                                                   You can also sell up to date books and helps students who are jumping into a new class, a new way to buy books!</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="91m-lm-FpZ" secondAttribute="trailing" id="74G-DI-Jtq"/>
+                            <constraint firstItem="91m-lm-FpZ" firstAttribute="top" secondItem="a2e-Fh-bsg" secondAttribute="bottom" id="CZc-9h-AtP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smo-HD-yrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1475" y="1489"/>
+        </scene>
+        <!--ExternalPDF View Controller-->
+        <scene sceneID="kdw-ms-goY">
+            <objects>
+                <viewController id="qDf-Vq-Y91" customClass="ExternalPDFViewController" customModule="MyFilesSwift9" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cD2-0X-6ep"/>
+                        <viewControllerLayoutGuide type="bottom" id="UWI-5N-qft"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MXn-cq-5Y2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pc5-6F-RVU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Search by Book" id="V83-Vx-cnb">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="8ia-dN-Fbb">
+                                            <connections>
+                                                <action selector="btnback:" destination="qDf-Vq-Y91" id="OBk-Vg-HDQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lW7-Mt-tYw">
+                                <rect key="frame" x="0.0" y="44" width="600" height="512"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="BIn-34-W8V"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webview" destination="lW7-Mt-tYw" id="h2E-Pk-AOj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ed-0a-3Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1475" y="859"/>
+        </scene>
+        <!--LocalPDF View Controller-->
+        <scene sceneID="KQh-V1-H6w">
+            <objects>
+                <viewController id="dUw-IW-KZs" customClass="LocalPDFViewController" customModule="MyFilesSwift9" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ALo-yo-jvf"/>
+                        <viewControllerLayoutGuide type="bottom" id="23U-rn-Tkj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wBu-v7-zkV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zxl-QA-8Yd">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Search by Zip Code" id="xTt-2c-5Ka">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="3bG-Hd-frS">
+                                            <connections>
+                                                <action selector="btnBack:" destination="dUw-IW-KZs" id="DFK-Y4-SZv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jug-67-Pe9">
+                                <rect key="frame" x="0.0" y="64" width="605" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Zxl-QA-8Yd" secondAttribute="trailing" id="L3Z-Ad-52A"/>
+                            <constraint firstItem="Zxl-QA-8Yd" firstAttribute="leading" secondItem="Jug-67-Pe9" secondAttribute="leading" id="MvW-rO-IAC"/>
+                            <constraint firstItem="Zxl-QA-8Yd" firstAttribute="leading" secondItem="wBu-v7-zkV" secondAttribute="leading" id="Tny-p6-wfu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jug-67-Pe9" secondAttribute="trailing" constant="-21" id="dD6-7B-VK4"/>
+                            <constraint firstItem="Jug-67-Pe9" firstAttribute="bottom" secondItem="23U-rn-Tkj" secondAttribute="top" id="gAj-Kz-hop"/>
+                            <constraint firstItem="Jug-67-Pe9" firstAttribute="top" secondItem="Zxl-QA-8Yd" secondAttribute="bottom" id="mLU-xM-6SI"/>
+                            <constraint firstItem="Zxl-QA-8Yd" firstAttribute="top" secondItem="ALo-yo-jvf" secondAttribute="bottom" id="sOc-Zf-zpM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="Jug-67-Pe9" id="MZg-Ke-16R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jAF-Ca-poz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1475" y="227"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="0002542_rockford-illinois-folded-city-street-map.jpeg" width="1157" height="1280"/>
+    </resources>
+</document>
